@@ -48,8 +48,8 @@ public class CustomArrayAdapter extends ArrayAdapter<ListObject>{
         //Bitmap bm = ThumbnailUtils.extractThumbnail(BitmapFactory.decodeResource(mContext.getResources(), object.getTitleImageResId()), 100, 100);
         //image.setImageResource(object.getTitleImageResId());
         //image.setImageBitmap(bm);
-        Picasso.with(mContext).load(object.getTitleImageResId()).into(image);
-        //image.setImageBitmap(object.getTitleImageThumbnail(mContext));
+        //Picasso.with(mContext).load(object.getTitleImageResId()).resize(100, 100).into(image);
+        image.setImageBitmap(object.getTitleImageThumbnail(mContext));
         title.setText(object.getHeroNameResId());
         subtitle.setText(object.getPublisherResId());
 
