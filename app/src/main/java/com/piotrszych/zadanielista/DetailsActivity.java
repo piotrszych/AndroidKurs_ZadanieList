@@ -4,7 +4,9 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -27,17 +29,48 @@ public class DetailsActivity extends AppCompatActivity {
         TextView publisherTv = (TextView) findViewById(R.id.details_publisher);
         TextView detailsContentTv = (TextView) findViewById(R.id.details_details_content);
         RelativeLayout detailsBackButton = (RelativeLayout) findViewById(R.id.details_back_button);
+        final LinearLayout circlesHolder = (LinearLayout) findViewById(R.id.details_circles_holder);
 
         pager.setAdapter(imagesPagerAdapter);
         titleTv.setText(mListObject.getHeroNameResId());
         String publisherText = getString(R.string.details_publisher_title, getString(mListObject.getPublisherResId()));
         publisherTv.setText(publisherText);
         detailsContentTv.setText(mListObject.getDescriptionResId());
+        for(int i = 0; i < mListObject.getImagesResArray().length; i++) {
+            View circleView = new View(this);
+            LinearLayout.LayoutParams viewLP = new LinearLayout.LayoutParams(10, 10, 1);
+            viewLP.setMargins(10, 10, 10, 10);
+            circleView.setLayoutParams(viewLP);
+            if(i == 0) circleView.setBackgroundResource(R.drawable.shape_circle_choosen);
+            else circleView.setBackgroundResource(R.drawable.shape_circle_idle);
+            circlesHolder.addView(circleView);
+        }
 
         detailsBackButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 DetailsActivity.this.finish();
+            }
+        });
+
+        pager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
+
+            @Override
+            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+            }
+
+            @Override
+            public void onPageSelected(int position) {
+                for(int i = 0; i < circlesHolder.getChildCount(); i++) {
+                    if(i == position) circlesHolder.getChildAt(i).setBackgroundResource(R.drawable.shape_circle_choosen);
+                    else circlesHolder.getChildAt(i).setBackgroundResource(R.drawable.shape_circle_idle);
+                }
+            }
+
+            @Override
+            public void onPageScrollStateChanged(int state) {
+
             }
         });
     }

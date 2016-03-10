@@ -7,11 +7,25 @@
     android:weightSum="9"
     tools:context=".DetailsActivity">
 
-    <android.support.v4.view.ViewPager
-        android:id="@+id/details_image_pager"
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="3" />
+        android:layout_weight="3">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/details_image_pager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <LinearLayout
+            android:id="@+id/details_circles_holder"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
 
     <ScrollView
         android:layout_width="match_parent"
