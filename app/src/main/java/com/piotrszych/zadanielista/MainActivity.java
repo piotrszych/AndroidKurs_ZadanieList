@@ -47,22 +47,15 @@ public class MainActivity extends AppCompatActivity {
 
     private ArrayList<ListObject> getDummyList() {
         ArrayList<ListObject> toReturn = new ArrayList<>();
-        //FIXME
-        int[] imgs_batman = new int[]{R.drawable.batman_01, R.drawable.batman_01, R.drawable.batman_01};
-        //FIXME
-        int[] imgs_laika = new int[]{R.drawable.laika_01, R.drawable.laika_01, R.drawable.laika_01};
-        //FIXME
-        int[] imgs_superman = new int[]{R.drawable.superman_01, R.drawable.superman_01, R.drawable.superman_01};
-        //FIXME
-        int[] imgs_spiderman = new int[]{R.drawable.spiderman_01, R.drawable.spiderman_01, R.drawable.spiderman_01};
-        //FIXME
-        int[] imgs_punisher = new int[]{R.drawable.punisher_01, R.drawable.punisher_01, R.drawable.punisher_01};
-        //FIXME
-        int[] imgs_sandman = new int[]{R.drawable.sandman_01, R.drawable.sandman_01, R.drawable.sandman_01};
-        //FIXME
-        int[] imgs_wonderwoman = new int[]{R.drawable.wonderwoman_01, R.drawable.wonderwoman_01, R.drawable.wonderwoman_01};
-        //FIXME
-        int[] imgs_manhattan = new int[]{R.drawable.manhattan_01, R.drawable.manhattan_01, R.drawable.manhattan_01};
+
+        int[] imgs_batman = new int[]{R.drawable.batman_01, R.drawable.batman_02, R.drawable.batman_03};
+        int[] imgs_laika = new int[]{R.drawable.laika_01, R.drawable.laika_02, R.drawable.laika_03};
+        int[] imgs_superman = new int[]{R.drawable.superman_01, R.drawable.superman_02, R.drawable.superman_03};
+        int[] imgs_spiderman = new int[]{R.drawable.spiderman_01, R.drawable.spiderman_02, R.drawable.spiderman_03};
+        int[] imgs_punisher = new int[]{R.drawable.punisher_01, R.drawable.punisher_02, R.drawable.punisher_03};
+        int[] imgs_sandman = new int[]{R.drawable.sandman_01, R.drawable.sandman_02, R.drawable.sandman_03};
+        int[] imgs_wonderwoman = new int[]{R.drawable.wonderwoman_01, R.drawable.wonderwoman_02, R.drawable.wonderwoman_03};
+        int[] imgs_manhattan = new int[]{R.drawable.manhattan_01, R.drawable.manhattan_02, R.drawable.manhattan_03};
         int[] imgs_canary = new int[]{R.drawable.blackcanary_01, R.drawable.blackcanary_02, R.drawable.blackcanary_03};
         int[] imgs_ironman = new int[]{R.drawable.ironman_01, R.drawable.ironman_02, R.drawable.ironman_03};
         int[] imgs_lantern = new int[]{R.drawable.lantern_01, R.drawable.lantern_02, R.drawable.lantern_03};
